@@ -51,7 +51,7 @@ class DMG_Read_More_Command {
         if ( $query->have_posts() ) {
             foreach ( $query->posts as $post_id ) {
                 $post = get_post( $post_id );
-                if ( has_block( 'core/dmg-read-more-search', $post->post_content ) ) {
+                if ( has_block( 'create-block/dmg-read-more-search', $post->post_content ) ) {
                     WP_CLI::log( $post_id );
                 }
             }
